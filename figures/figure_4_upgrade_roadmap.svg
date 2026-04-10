@@ -1,0 +1,45 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F6F0E6"/>
+  <rect x="48" y="48" width="1504" height="804" rx="30" fill="#FFFDF8" stroke="#D9CDB8" stroke-width="2"/>
+  <text x="90" y="120" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700">Model Upgrade Roadmap</text>
+  <text x="90" y="158" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">Research-driven path for improving expected-return calibration and out-of-sample credibility</text>
+
+  <line x1="180" y1="455" x2="1420" y2="455" stroke="#183B2D" stroke-width="8" stroke-linecap="round"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="250" cy="455" r="48" fill="#1B7A5B"/>
+    <text x="250" y="462" text-anchor="middle" fill="white" font-size="26" font-weight="700">1</text>
+    <text x="140" y="555" fill="#183B2D" font-size="24" font-weight="700">Black-Litterman Core</text>
+    <text x="140" y="590" fill="#4C463D" font-size="18">Anchored in Black-Litterman (1992)</text>
+    <text x="140" y="618" fill="#4C463D" font-size="18">for better calibrated forecasts</text>
+    <text x="140" y="646" fill="#4C463D" font-size="18">than raw historical means.</text>
+
+    <circle cx="560" cy="455" r="48" fill="#2C5E92"/>
+    <text x="560" y="462" text-anchor="middle" fill="white" font-size="26" font-weight="700">2</text>
+    <text x="450" y="555" fill="#183B2D" font-size="24" font-weight="700">Factor Priors</text>
+    <text x="450" y="590" fill="#4C463D" font-size="18">Guided by Fama-French (1993)</text>
+    <text x="450" y="618" fill="#4C463D" font-size="18">risk factors to stabilize</text>
+    <text x="450" y="646" fill="#4C463D" font-size="18">expected return estimates.</text>
+
+    <circle cx="870" cy="455" r="48" fill="#8B5FBF"/>
+    <text x="870" y="462" text-anchor="middle" fill="white" font-size="26" font-weight="700">3</text>
+    <text x="750" y="555" fill="#183B2D" font-size="24" font-weight="700">Robust Bayesian Layer</text>
+    <text x="750" y="590" fill="#4C463D" font-size="18">From Meucci’s robust</text>
+    <text x="750" y="618" fill="#4C463D" font-size="18">Bayesian allocation</text>
+    <text x="750" y="646" fill="#4C463D" font-size="18">to dampen return noise.</text>
+
+    <circle cx="1180" cy="455" r="48" fill="#D98C3A"/>
+    <text x="1180" y="462" text-anchor="middle" fill="white" font-size="26" font-weight="700">4</text>
+    <text x="1060" y="555" fill="#183B2D" font-size="24" font-weight="700">Next Research Phase</text>
+    <text x="1060" y="590" fill="#4C463D" font-size="18">Benchmark vs. naive (DeMiguel et al.)</text>
+    <text x="1060" y="616" fill="#4C463D" font-size="18">tighten constraints (Jagannathan &amp; Ma)</text>
+    <text x="1060" y="642" fill="#4C463D" font-size="18">and explore volatility or</text>
+    <text x="1060" y="668" fill="#4C463D" font-size="18">regime-neutral overlays.</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" fill="#6B6256" font-size="18">
+    <text x="145" y="744">Source anchors for the roadmap:</text>
+    <text x="145" y="774">Black and Litterman (1992), Fama and French (1993), Meucci (2005),</text>
+    <text x="145" y="800">Jagannathan and Ma (2003), DeMiguel, Garlappi, and Uppal (2009).</text>
+  </g>
+</svg>

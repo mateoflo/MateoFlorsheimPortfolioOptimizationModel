@@ -1,0 +1,55 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="960" fill="#F6F0E6"/>
+  <rect x="48" y="48" width="1504" height="864" rx="30" fill="#FFFDF8" stroke="#D9CDB8" stroke-width="2"/>
+  <text x="90" y="120" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700">Forecast Error Distribution</text>
+  <text x="90" y="158" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">Forecast error is defined as realized return minus expected return for the 10-ticker baseline backtest</text>
+  <line x1="190.00" y1="180" x2="190.00" y2="840" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="190.00" y="872" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">-40%</text>
+  <line x1="470.00" y1="180" x2="470.00" y2="840" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="470.00" y="872" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">-20%</text>
+  <line x1="750.00" y1="180" x2="750.00" y2="840" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="750.00" y="872" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">0%</text>
+  <line x1="1030.00" y1="180" x2="1030.00" y2="840" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="1030.00" y="872" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">20%</text>
+  <line x1="1310.00" y1="180" x2="1310.00" y2="840" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="1310.00" y="872" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">40%</text>
+  <line x1="120" y1="840.00" x2="1520" y2="840.00" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="94" y="846.00" text-anchor="end" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">0</text>
+  <line x1="120" y1="675.00" x2="1520" y2="675.00" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="94" y="681.00" text-anchor="end" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">50</text>
+  <line x1="120" y1="510.00" x2="1520" y2="510.00" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="94" y="516.00" text-anchor="end" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">100</text>
+  <line x1="120" y1="345.00" x2="1520" y2="345.00" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="94" y="351.00" text-anchor="end" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">150</text>
+  <line x1="120" y1="180.00" x2="1520" y2="180.00" stroke="#E3D9C8" stroke-width="2"/>
+  <text x="94" y="186.00" text-anchor="end" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">200</text>
+  <line x1="750.00" y1="180" x2="750.00" y2="840" stroke="#183B2D" stroke-width="3" stroke-dasharray="10 10"/>
+  <rect x="123.00" y="787.04" width="64.00" height="52.96" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="193.00" y="770.74" width="64.00" height="69.26" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="263.00" y="721.85" width="64.00" height="118.15" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="333.00" y="571.11" width="64.00" height="268.89" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="403.00" y="493.70" width="64.00" height="346.30" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="473.00" y="310.37" width="64.00" height="529.63" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="543.00" y="180.00" width="64.00" height="660.00" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="613.00" y="330.74" width="64.00" height="509.26" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="683.00" y="294.07" width="64.00" height="545.93" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="753.00" y="428.52" width="64.00" height="411.48" rx="8" fill="#D98C3A" fill-opacity="0.88"/>
+  <rect x="823.00" y="587.41" width="64.00" height="252.59" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="893.00" y="668.89" width="64.00" height="171.11" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="963.00" y="799.26" width="64.00" height="40.74" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="1033.00" y="811.48" width="64.00" height="28.52" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="1103.00" y="827.78" width="64.00" height="12.22" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="1173.00" y="831.85" width="64.00" height="8.15" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="1243.00" y="827.78" width="64.00" height="12.22" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="1313.00" y="835.93" width="64.00" height="4.07" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="1383.00" y="835.93" width="64.00" height="4.07" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <rect x="1453.00" y="835.93" width="64.00" height="4.07" rx="8" fill="#1B7A5B" fill-opacity="0.88"/>
+  <text x="800" y="906" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Forecast error (realized return minus expected return)</text>
+  <text x="34" y="480" transform="rotate(-90 34 480)" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Number of portfolios</text>
+  <rect x="1120" y="94" width="330" height="84" rx="16" fill="#F4EFE5" stroke="#D9CDB8" stroke-width="1.5"/>
+  <text x="1144" y="126" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Mean forecast error: -9.55%</text>
+  <text x="1144" y="156" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Std. deviation: 13.62%</text>
+  <rect x="945" y="274" width="590" height="76" rx="16" fill="#F4EFE5" stroke="#D9CDB8" stroke-width="1.5"/>
+  <text x="971" y="306" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">The left-heavy histogram confirms the baseline model was usually</text>
+  <text x="971" y="332" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">too optimistic, even though many portfolios still finished positive.</text>
+</svg>

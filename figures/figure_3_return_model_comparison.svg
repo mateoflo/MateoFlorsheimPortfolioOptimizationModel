@@ -1,0 +1,79 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="980" fill="#F6F0E6"/>
+  <rect x="48" y="48" width="1504" height="884" rx="30" fill="#FFFDF8" stroke="#D9CDB8" stroke-width="2"/>
+  <text x="90" y="120" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700">Expected-Return Model Comparison</text>
+  <text x="90" y="158" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">1,000 requested / 994 completed portfolios, 10-ticker backtest, formation date 2024-01-01</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#6B6256">
+    <text x="72" y="270">80%</text>
+    <text x="72" y="390">60%</text>
+    <text x="72" y="510">40%</text>
+    <text x="72" y="630">20%</text>
+    <text x="84" y="750">0%</text>
+  </g>
+
+  <g stroke="#D8CCB7" stroke-width="2">
+    <line x1="150" y1="250" x2="1450" y2="250"/>
+    <line x1="150" y1="370" x2="1450" y2="370"/>
+    <line x1="150" y1="490" x2="1450" y2="490"/>
+    <line x1="150" y1="610" x2="1450" y2="610"/>
+    <line x1="150" y1="730" x2="1450" y2="730"/>
+  </g>
+
+  <text x="36" y="490" transform="rotate(-90 36 490)" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Percentage</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="980" y="96" width="26" height="26" rx="6" fill="#1B7A5B"/>
+    <text x="1018" y="116" fill="#183B2D" font-size="20" font-weight="700">Accuracy rate</text>
+    <rect x="980" y="136" width="26" height="26" rx="6" fill="#2C5E92"/>
+    <text x="1018" y="156" fill="#183B2D" font-size="20" font-weight="700">Expected return</text>
+    <rect x="980" y="176" width="26" height="26" rx="6" fill="#D98C3A"/>
+    <text x="1018" y="196" fill="#183B2D" font-size="20" font-weight="700">Mean realized return</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="245" y="795" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Historical</text>
+    <text x="245" y="824" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Mean</text>
+
+    <text x="565" y="795" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Bayes-</text>
+    <text x="565" y="824" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Stein</text>
+
+    <text x="885" y="795" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Market</text>
+    <text x="885" y="824" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Factor</text>
+
+    <text x="1205" y="795" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Black-</text>
+    <text x="1205" y="824" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Litterman</text>
+  </g>
+
+  <rect x="175" y="589" width="52" height="141" rx="14" fill="#1B7A5B"/>
+  <rect x="236" y="614" width="52" height="116" rx="14" fill="#2C5E92"/>
+  <rect x="297" y="671" width="52" height="59" rx="14" fill="#D98C3A"/>
+  <text x="201" y="579" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">23.4%</text>
+  <text x="262" y="604" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">19.3%</text>
+  <text x="323" y="661" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">9.8%</text>
+
+  <rect x="495" y="591" width="52" height="139" rx="14" fill="#1B7A5B"/>
+  <rect x="556" y="614" width="52" height="116" rx="14" fill="#2C5E92"/>
+  <rect x="617" y="671" width="52" height="59" rx="14" fill="#D98C3A"/>
+  <text x="521" y="581" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">23.2%</text>
+  <text x="582" y="604" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">19.3%</text>
+  <text x="643" y="661" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">9.8%</text>
+
+  <rect x="815" y="270" width="52" height="460" rx="14" fill="#1B7A5B"/>
+  <rect x="876" y="724" width="52" height="6" rx="6" fill="#2C5E92"/>
+  <rect x="937" y="675" width="52" height="55" rx="14" fill="#D98C3A"/>
+  <text x="841" y="260" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">76.8%</text>
+  <text x="902" y="714" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">1.0%</text>
+  <text x="963" y="665" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">9.1%</text>
+
+  <rect x="1135" y="451" width="52" height="279" rx="14" fill="#1B7A5B"/>
+  <rect x="1196" y="669" width="52" height="61" rx="14" fill="#2C5E92"/>
+  <rect x="1257" y="671" width="52" height="59" rx="14" fill="#D98C3A"/>
+  <text x="1161" y="441" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">46.5%</text>
+  <text x="1222" y="659" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">10.1%</text>
+  <text x="1283" y="661" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">9.8%</text>
+
+  <rect x="72" y="840" width="1450" height="68" rx="16" fill="#F4EFE5" stroke="#D9CDB8" stroke-width="1.5"/>
+  <text x="96" y="872" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">Interpretation: Market Factor produced the highest formal accuracy by lowering the hurdle sharply,</text>
+  <text x="96" y="896" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">while Black-Litterman offered the best balance between realistic forecasts and practical realized performance.</text>
+</svg>

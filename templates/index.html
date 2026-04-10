@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Optimizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Quantitative Portfolio Research</p>
+        <h1>Portfolio Optimizer Workstation</h1>
+        <p class="hero-copy">Browser-based interface for the Python optimizer, with expected-return model selection, live summary cards, and implementation-ready share allocations.</p>
+      </div>
+      <div class="hero-note">
+        <span class="hero-kicker">Workflow</span>
+        <p>Enter tickers and portfolio controls, choose the expected-return engine, and run the same research backend that powers the desktop app.</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="panel form-panel">
+        <div class="panel-header">
+          <div>
+            <p class="panel-title">Portfolio Inputs</p>
+            <p class="panel-subtitle">Whole-number percentages are supported. For example, <code>5</code> means <code>5%</code>.</p>
+          </div>
+          <button type="button" class="ghost-button" id="load-example-button">Load Example</button>
+        </div>
+
+        <form id="optimizer-form">
+          <div class="settings-grid">
+            <label>
+              <span>Capital ($)</span>
+              <input name="capital" value="{{ defaults.capital }}">
+            </label>
+            <label>
+              <span>Lookback years</span>
+              <input name="lookback_years" value="{{ defaults.lookback_years }}">
+            </label>
+            <label>
+              <span>Auto max floor %</span>
+              <input name="auto_max_floor" value="{{ defaults.auto_max_floor }}">
+            </label>
+            <label>
+              <span>Auto max ceiling %</span>
+              <input name="auto_max_ceiling" value="{{ defaults.auto_max_ceiling }}">
+            </label>
+            <label>
+              <span>Minimum cash %</span>
+              <input name="min_cash_weight" value="{{ defaults.min_cash_weight }}">
+            </label>
+            <label>
+              <span>Maximum cash %</span>
+              <input name="max_cash_weight" value="{{ defaults.max_cash_weight }}">
+            </label>
+            <label>
+              <span>Cash yield %</span>
+              <input name="cash_yield" value="{{ defaults.cash_yield }}">
+            </label>
+            <label>
+              <span>Fallback T-bill %</span>
+              <input name="treasury_bill_yield" value="{{ defaults.treasury_bill_yield }}">
+            </label>
+            <label>
+              <span>Target return %</span>
+              <input name="target_expected_return" value="{{ defaults.target_expected_return }}">
+            </label>
+            <label>
+              <span>Target vol %</span>
+              <input name="target_volatility" value="{{ defaults.target_volatility }}">
+            </label>
+            <label>
+              <span>Monte Carlo paths</span>
+              <input name="simulation_paths" value="{{ defaults.simulation_paths }}">
+            </label>
+            <label>
+              <span>MC horizon years</span>
+              <input name="simulation_horizon_years" value="{{ defaults.simulation_horizon_years }}">
+            </label>
+            <label>
+              <span>Max allocation mode</span>
+              <select name="max_allocation_mode">
+                <option value="Manual" {% if defaults.max_allocation_mode == "Manual" %}selected{% endif %}>Manual</option>
+                <option value="Auto" {% if defaults.max_allocation_mode == "Auto" %}selected{% endif %}>Auto</option>
+              </select>
+            </label>
+            <label>
+              <span>Expected return model</span>
+              <select name="expected_return_method">
+                {% for value, label in expected_return_methods %}
+                <option value="{{ value }}" {% if defaults.expected_return_method == value %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+              </select>
+            </label>
+            <label>
+              <span>Return shrinkage %</span>
+              <input name="expected_return_shrinkage" value="{{ defaults.expected_return_shrinkage }}">
+            </label>
+            <label class="toggle-field">
+              <span>Auto-fetch T-bill yield</span>
+              <input type="checkbox" name="auto_treasury_bill_yield" {% if defaults.auto_treasury_bill_yield %}checked{% endif %}>
+            </label>
+          </div>
+
+          <div class="assets-toolbar">
+            <div>
+              <p class="panel-title">Asset Universe</p>
+              <p class="panel-subtitle">Add the stocks you want to evaluate. Max weight is ignored in auto mode.</p>
+            </div>
+            <button type="button" class="ghost-button" id="add-asset-button">Add Asset</button>
+          </div>
+
+          <div class="asset-table" id="asset-table">
+            <div class="asset-header">Ticker</div>
+            <div class="asset-header">Max Weight %</div>
+            <div class="asset-header asset-header-action">Remove</div>
+            {% for asset in default_assets %}
+            <div class="asset-row">
+              <input class="asset-input ticker-input" value="{{ asset.ticker }}">
+              <input class="asset-input max-weight-input" value="{{ asset.max_weight }}">
+              <button type="button" class="remove-button">Remove</button>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-button" id="optimize-button">Optimize Portfolio</button>
+            <span class="status-pill" id="status-pill">Ready</span>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel results-panel">
+        <div class="panel-header">
+          <div>
+            <p class="panel-title">Optimizer Output</p>
+            <p class="panel-subtitle" id="status-text">Run the optimizer to populate results.</p>
+          </div>
+        </div>
+
+        <div class="summary-grid" id="summary-grid">
+          {% for key, label in [
+            ('expected_return', 'Expected Return'),
+            ('expected_volatility', 'Expected Volatility'),
+            ('risk_level', 'Risk Level'),
+            ('cash', 'Cash'),
+            ('treasury_bill', 'Treasury Bills'),
+            ('defensive', 'Cash + T-Bills'),
+            ('tbill_yield', 'T-bill Yield'),
+            ('tbill_source', 'T-bill Source'),
+            ('sample_window', 'Data Window'),
+            ('mc_expected_value', 'MC Mean Value'),
+            ('mc_median_value', 'MC Median Value'),
+            ('mc_var_5', 'MC 5th %ile'),
+            ('mc_loss_prob', 'MC Loss Prob'),
+            ('mc_paths', 'MC Paths'),
+            ('expected_return_method', 'Return Model'),
+            ('expected_return_description', 'Return Model Notes')
+          ] %}
+          <article class="summary-card">
+            <span class="summary-label">{{ label }}</span>
+            <strong class="summary-value" data-summary-key="{{ key }}">--</strong>
+          </article>
+          {% endfor %}
+        </div>
+
+        <div class="table-wrapper">
+          <table id="results-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Price</th>
+                <th>Est Ret</th>
+                <th>Est Vol</th>
+                <th>Target Wt</th>
+                <th>Shares</th>
+                <th>Invested $</th>
+                <th>Realized Wt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="placeholder-row">
+                <td colspan="8">No optimization has been run yet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <template id="asset-row-template">
+    <div class="asset-row">
+      <input class="asset-input ticker-input" value="">
+      <input class="asset-input max-weight-input" value="25">
+      <button type="button" class="remove-button">Remove</button>
+    </div>
+  </template>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

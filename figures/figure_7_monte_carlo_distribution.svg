@@ -1,0 +1,39 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="960" fill="#F6F0E6"/>
+  <rect x="48" y="48" width="1504" height="864" rx="30" fill="#FFFDF8" stroke="#D9CDB8" stroke-width="2"/>
+  <text x="90" y="120" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700">HMM Monte Carlo Terminal Value Distribution</text>
+  <text x="90" y="158" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">Illustrative one-year terminal-value density showing how the report can visualize</text>
+  <text x="90" y="186" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">downside risk, central tendency, and tail outcomes</text>
+  <line x1="140" y1="760" x2="1460" y2="760" stroke="#183B2D" stroke-width="4"/>
+  <line x1="140" y1="220" x2="140" y2="760" stroke="#183B2D" stroke-width="4"/>
+  <path d="M 140.00 709.62 L 151.00 709.29 L 162.00 708.86 L 173.00 708.31 L 184.00 707.61 L 195.00 706.73 L 206.00 705.63 L 217.00 704.26 L 228.00 702.57 L 239.00 700.51 L 250.00 698.00 L 261.00 694.97 L 272.00 691.35 L 283.00 687.06 L 294.00 682.02 L 305.00 676.13 L 316.00 669.33 L 327.00 661.55 L 338.00 652.71 L 349.00 642.77 L 360.00 631.71 L 371.00 619.50 L 382.00 606.16 L 393.00 591.74 L 404.00 576.30 L 415.00 559.95 L 426.00 542.82 L 437.00 525.06 L 448.00 506.86 L 459.00 488.44 L 470.00 470.02 L 481.00 451.82 L 492.00 434.09 L 503.00 417.07 L 514.00 400.96 L 525.00 385.98 L 536.00 372.28 L 547.00 360.02 L 558.00 349.28 L 569.00 340.14 L 580.00 332.61 L 591.00 326.67 L 602.00 322.27 L 613.00 319.30 L 624.00 317.66 L 635.00 317.20 L 646.00 317.77 L 657.00 319.20 L 668.00 321.35 L 679.00 324.06 L 690.00 327.19 L 701.00 330.62 L 712.00 334.27 L 723.00 338.05 L 734.00 341.92 L 745.00 345.85 L 756.00 349.85 L 767.00 353.93 L 778.00 358.12 L 789.00 362.47 L 800.00 367.02 L 811.00 371.83 L 822.00 376.95 L 833.00 382.42 L 844.00 388.28 L 855.00 394.56 L 866.00 401.26 L 877.00 408.38 L 888.00 415.91 L 899.00 423.80 L 910.00 432.01 L 921.00 440.47 L 932.00 449.10 L 943.00 457.83 L 954.00 466.54 L 965.00 475.15 L 976.00 483.57 L 987.00 491.71 L 998.00 499.47 L 1009.00 506.79 L 1020.00 513.61 L 1031.00 519.91 L 1042.00 525.65 L 1053.00 530.84 L 1064.00 535.52 L 1075.00 539.73 L 1086.00 543.54 L 1097.00 547.04 L 1108.00 550.33 L 1119.00 553.53 L 1130.00 556.73 L 1141.00 560.07 L 1152.00 563.63 L 1163.00 567.52 L 1174.00 571.80 L 1185.00 576.53 L 1196.00 581.74 L 1207.00 587.43 L 1218.00 593.59 L 1229.00 600.17 L 1240.00 607.11 L 1251.00 614.32 L 1262.00 621.72 L 1273.00 629.20 L 1284.00 636.66 L 1295.00 643.99 L 1306.00 651.12 L 1317.00 657.94 L 1328.00 664.39 L 1339.00 670.42 L 1350.00 675.97 L 1361.00 681.03 L 1372.00 685.58 L 1383.00 689.63 L 1394.00 693.18 L 1405.00 696.27 L 1416.00 698.93 L 1427.00 701.18 L 1438.00 703.07 L 1449.00 704.64 L 1460.00 705.93 L 1460.00 760 L 140.00 760 Z" fill="#D8E9E2" stroke="#1B7A5B" stroke-width="4"/>
+  <line x1="415.00" y1="220" x2="415.00" y2="760" stroke="#B33A3A" stroke-width="4" stroke-dasharray="10 10"/>
+  <line x1="668.00" y1="220" x2="668.00" y2="760" stroke="#183B2D" stroke-width="4" stroke-dasharray="10 10"/>
+  <line x1="734.00" y1="220" x2="734.00" y2="760" stroke="#2C5E92" stroke-width="4" stroke-dasharray="10 10"/>
+  <line x1="470.00" y1="220" x2="470.00" y2="760" stroke="#8B5FBF" stroke-width="4" stroke-dasharray="10 10"/>
+  <line x1="250.00" y1="760" x2="250.00" y2="768" stroke="#183B2D" stroke-width="3"/>
+  <text x="250.00" y="794" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">$80k</text>
+  <line x1="470.00" y1="760" x2="470.00" y2="768" stroke="#183B2D" stroke-width="3"/>
+  <text x="470.00" y="794" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">$100k</text>
+  <line x1="690.00" y1="760" x2="690.00" y2="768" stroke="#183B2D" stroke-width="3"/>
+  <text x="690.00" y="794" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">$120k</text>
+  <line x1="910.00" y1="760" x2="910.00" y2="768" stroke="#183B2D" stroke-width="3"/>
+  <text x="910.00" y="794" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">$140k</text>
+  <line x1="1130.00" y1="760" x2="1130.00" y2="768" stroke="#183B2D" stroke-width="3"/>
+  <text x="1130.00" y="794" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">$160k</text>
+  <line x1="1350.00" y1="760" x2="1350.00" y2="768" stroke="#183B2D" stroke-width="3"/>
+  <text x="1350.00" y="794" text-anchor="middle" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">$180k</text>
+  <text x="470" y="886" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Terminal portfolio value after one year</text>
+  <text x="34" y="470" transform="rotate(-90 34 470)" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Relative probability density</text>
+  <rect x="930" y="238" width="470" height="164" rx="16" fill="#F4EFE5" stroke="#D9CDB8" stroke-width="1.5"/>
+  <text x="962" y="268" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Line</text>
+  <text x="1060" y="268" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Meaning</text>
+  <line x1="962" y1="294" x2="1002" y2="294" stroke="#B33A3A" stroke-width="4" stroke-dasharray="10 10"/>
+  <text x="1060" y="300" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="16">5th percentile terminal value</text>
+  <line x1="962" y1="324" x2="1002" y2="324" stroke="#8B5FBF" stroke-width="4" stroke-dasharray="10 10"/>
+  <text x="1060" y="330" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="16">starting capital / breakeven anchor</text>
+  <line x1="962" y1="354" x2="1002" y2="354" stroke="#183B2D" stroke-width="4" stroke-dasharray="10 10"/>
+  <text x="1060" y="360" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="16">median terminal value</text>
+  <line x1="962" y1="378" x2="1002" y2="378" stroke="#2C5E92" stroke-width="4" stroke-dasharray="10 10"/>
+  <text x="1060" y="384" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="16">mean terminal value</text>
+</svg>

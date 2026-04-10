@@ -1,0 +1,60 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="960" fill="#F6F0E6"/>
+  <rect x="48" y="48" width="1504" height="864" rx="30" fill="#FFFDF8" stroke="#D9CDB8" stroke-width="2"/>
+  <text x="90" y="120" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700">Original Backtest Baseline Results</text>
+  <text x="90" y="158" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">Accuracy versus profitability across the first three out-of-sample experiments</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="90" y="250" fill="#6B6256" font-size="20">0%</text>
+    <text x="90" y="360" fill="#6B6256" font-size="20">25%</text>
+    <text x="90" y="470" fill="#6B6256" font-size="20">50%</text>
+    <text x="90" y="580" fill="#6B6256" font-size="20">75%</text>
+    <text x="90" y="690" fill="#6B6256" font-size="20">100%</text>
+  </g>
+
+  <g stroke="#D8CCB7" stroke-width="2">
+    <line x1="150" y1="230" x2="1450" y2="230"/>
+    <line x1="150" y1="340" x2="1450" y2="340"/>
+    <line x1="150" y1="450" x2="1450" y2="450"/>
+    <line x1="150" y1="560" x2="1450" y2="560"/>
+    <line x1="150" y1="670" x2="1450" y2="670"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="275" y="775" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Run 1</text>
+    <text x="275" y="808" text-anchor="middle" fill="#6B6256" font-size="18">100 portfolios</text>
+    <text x="275" y="834" text-anchor="middle" fill="#6B6256" font-size="18">20 tickers</text>
+
+    <text x="800" y="775" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Run 2</text>
+    <text x="800" y="808" text-anchor="middle" fill="#6B6256" font-size="18">9,997 portfolios</text>
+    <text x="800" y="834" text-anchor="middle" fill="#6B6256" font-size="18">20 tickers</text>
+
+    <text x="1325" y="775" text-anchor="middle" fill="#183B2D" font-size="24" font-weight="700">Run 3</text>
+    <text x="1325" y="808" text-anchor="middle" fill="#6B6256" font-size="18">994 portfolios</text>
+    <text x="1325" y="834" text-anchor="middle" fill="#6B6256" font-size="18">10 tickers</text>
+  </g>
+
+  <rect x="205" y="280" width="110" height="390" rx="18" fill="#1B7A5B"/>
+  <rect x="350" y="322" width="110" height="348" rx="18" fill="#D98C3A"/>
+  <text x="260" y="270" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">59.0%</text>
+  <text x="405" y="312" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">87.0%</text>
+
+  <rect x="730" y="630" width="110" height="40" rx="18" fill="#1B7A5B"/>
+  <rect x="875" y="309" width="110" height="361" rx="18" fill="#D98C3A"/>
+  <text x="785" y="620" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">9.16%</text>
+  <text x="930" y="299" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">90.23%</text>
+
+  <rect x="1255" y="515" width="110" height="155" rx="18" fill="#1B7A5B"/>
+  <rect x="1400" y="351" width="110" height="319" rx="18" fill="#D98C3A"/>
+  <text x="1310" y="505" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">23.44%</text>
+  <text x="1455" y="341" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">79.88%</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="1040" y="95" width="28" height="28" rx="6" fill="#1B7A5B"/>
+    <text x="1082" y="116" fill="#183B2D" font-size="20" font-weight="700">Met or exceeded expected return</text>
+    <rect x="1040" y="138" width="28" height="28" rx="6" fill="#D98C3A"/>
+    <text x="1082" y="159" fill="#183B2D" font-size="20" font-weight="700">Finished the year profitable</text>
+  </g>
+
+  <text x="90" y="895" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">Interpretation: the original model produced profitable portfolios much more often than it met its own expected-return forecasts.</text>
+</svg>

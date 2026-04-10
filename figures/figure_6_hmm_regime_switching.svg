@@ -1,0 +1,40 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="960" fill="#F6F0E6"/>
+  <rect x="48" y="48" width="1504" height="864" rx="30" fill="#FFFDF8" stroke="#D9CDB8" stroke-width="2"/>
+  <defs>
+    <marker id="arrow-solid" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#183B2D"/>
+    </marker>
+  </defs>
+  <text x="90" y="120" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700">HMM Regime-Switching Illustration</text>
+  <text x="90" y="158" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">Methodological figure showing how the model treats returns as switching across latent market states</text>
+  <text x="90" y="186" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="20">rather than following one stationary regime</text>
+  <rect x="120" y="270" width="320" height="390" rx="26" fill="#E6F1EC"/>
+  <rect x="640" y="210" width="320" height="450" rx="26" fill="#FCEAD9"/>
+  <rect x="1155" y="292" width="290" height="356" rx="26" fill="#EEF1FA"/>
+  <text x="280" y="332" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">State A</text>
+  <text x="280" y="368" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="22">Low Vol / Stable Trend</text>
+  <text x="280" y="418" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="20">Lower variance</text>
+  <text x="280" y="448" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="20">Higher persistence</text>
+  <text x="280" y="478" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="20">More moderate tail risk</text>
+  <text x="800" y="272" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">State B</text>
+  <text x="800" y="308" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="22">High Vol / Stress Regime</text>
+  <text x="800" y="358" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="20">Higher variance</text>
+  <text x="800" y="388" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="20">Wider outcome dispersion</text>
+  <text x="800" y="418" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="20">Potential correlation spikes</text>
+  <text x="1300" y="358" text-anchor="middle" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Simulation Layer</text>
+  <text x="1300" y="390" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="18">Markov state transitions</text>
+  <text x="1300" y="428" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="16">Daily draws depend on the</text>
+  <text x="1300" y="450" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="16">current latent regime and its</text>
+  <text x="1300" y="472" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="16">transition probabilities</text>
+  <text x="1300" y="512" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="16">State-conditioned return draws</text>
+  <text x="1300" y="534" text-anchor="middle" fill="#4C463D" font-family="Arial, Helvetica, sans-serif" font-size="16">feed the terminal-value paths</text>
+  <path d="M440 470 C520 410, 560 372, 640 360" stroke="#183B2D" stroke-width="5" fill="none" marker-end="url(#arrow-solid)"/>
+  <path d="M960 430 C1040 430, 1085 430, 1160 430" stroke="#183B2D" stroke-width="5" fill="none" marker-end="url(#arrow-solid)"/>
+  <path d="M660 612 C590 664, 500 670, 430 590" stroke="#183B2D" stroke-width="5" fill="none" stroke-dasharray="12 10" marker-end="url(#arrow-solid)"/>
+  <text x="505" y="332" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">p(A→B)</text>
+  <text x="978" y="396" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">state-specific draws</text>
+  <text x="512" y="694" fill="#183B2D" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">p(B→A)</text>
+  <rect x="72" y="846" width="1450" height="58" rx="16" fill="#F4EFE5" stroke="#D9CDB8" stroke-width="1.5"/>
+  <text x="96" y="880" fill="#6B6256" font-family="Arial, Helvetica, sans-serif" font-size="18">This is a methodological diagram rather than an empirical chart. It shows why the Monte Carlo engine is regime-aware instead of assuming one fixed volatility environment.</text>
+</svg>
