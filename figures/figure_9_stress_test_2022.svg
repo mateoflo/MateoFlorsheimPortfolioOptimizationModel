@@ -1,0 +1,47 @@
+<svg width="1020" height="660" viewBox="0 0 1020 660" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1020" height="660" fill="#FFFFFF"/>
+  <text x="110.00" y="44.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="700">Rebalancing vs. Buy-and-Hold — 2022 Bear Market Stress Test</text>
+  <text x="110.00" y="68.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Federal Reserve raised rates 10x — S&amp;P 500 -18% in 2022</text>
+  <text x="110.00" y="86.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">3-year IS window  |  10 tickers  |  No-rebal n=932  |  Quarterly n=898</text>
+  <rect x="110.00" y="130.00" width="660.00" height="400.00" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <line x1="110.00" y1="509.83" x2="770.00" y2="509.83" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="102.00" y="514.83" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">-15%</text>
+  <line x1="110.00" y1="447.59" x2="770.00" y2="447.59" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="102.00" y="452.59" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">-10%</text>
+  <line x1="110.00" y1="385.35" x2="770.00" y2="385.35" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="102.00" y="390.35" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">-5%</text>
+  <line x1="110.00" y1="323.10" x2="770.00" y2="323.10" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="102.00" y="328.10" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">0%</text>
+  <line x1="110.00" y1="260.86" x2="770.00" y2="260.86" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="102.00" y="265.86" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">5%</text>
+  <line x1="110.00" y1="198.62" x2="770.00" y2="198.62" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="102.00" y="203.62" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">10%</text>
+  <line x1="110.00" y1="136.38" x2="770.00" y2="136.38" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="102.00" y="141.38" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">15%</text>
+  <line x1="110.00" y1="323.10" x2="770.00" y2="323.10" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="250.00" y="323.10" width="140.00" height="137.93" fill="#1D4ED8" rx="3"/>
+  <text x="320.00" y="479.03" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="16" font-weight="700">-11.1%</text>
+  <text x="320.00" y="552.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="600">Buy-and-Hold</text>
+  <rect x="490.00" y="293.81" width="140.00" height="29.30" fill="#15803D" rx="3"/>
+  <text x="560.00" y="285.81" text-anchor="middle" fill="#15803D" font-family="Helvetica Neue,Arial,sans-serif" font-size="16" font-weight="700">+2.4%</text>
+  <text x="560.00" y="552.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="600">Quarterly Rebalancing</text>
+  <text x="792.00" y="146.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Key Metrics</text>
+  <text x="792.00" y="174.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Rebalancing advantage</text>
+  <text x="792.00" y="192.00" text-anchor="start" fill="#15803D" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">+13.4%</text>
+  <text x="792.00" y="220.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">No-rebal OOS accuracy</text>
+  <text x="792.00" y="238.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">4.5%</text>
+  <text x="792.00" y="266.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">No-rebal profitable</text>
+  <text x="792.00" y="284.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">9.5%</text>
+  <text x="792.00" y="312.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Quarterly profitable</text>
+  <text x="792.00" y="330.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">56.3%</text>
+  <text x="792.00" y="358.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">No-rebal mean return</text>
+  <text x="792.00" y="376.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">-11.1%</text>
+  <text x="792.00" y="404.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Quarterly mean return</text>
+  <text x="792.00" y="422.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">+2.4%</text>
+  <rect x="792.00" y="459.00" width="14" height="14" rx="2" fill="#1D4ED8"/>
+  <text x="812.00" y="471.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Buy-and-Hold</text>
+  <rect x="792.00" y="487.00" width="14" height="14" rx="2" fill="#15803D"/>
+  <text x="812.00" y="499.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Quarterly Rebalanced</text>
+  <text x="38.00" y="330.00" transform="rotate(-90 38.00 330.00)" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="600">Mean Realized Annual Return</text>
+  <text x="440.00" y="650.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Portfolio Strategy</text>
+</svg>

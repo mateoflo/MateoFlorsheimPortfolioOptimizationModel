@@ -1,0 +1,33 @@
+<svg width="1050" height="620" viewBox="0 0 1050 620" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1050" height="620" fill="#FFFFFF"/>
+  <text x="80.00" y="40.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="700">HMM Monte Carlo Terminal Value Distribution</text>
+  <text x="80.00" y="62.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Illustrative one-year density showing downside risk, central tendency, and tail outcomes for a $100,000 portfolio</text>
+  <rect x="80.00" y="100.00" width="910.00" height="450.00" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <path d="M 80.00 533.72 L 87.00 533.57 L 94.00 533.38 L 101.00 533.13 L 108.00 532.81 L 115.00 532.41 L 122.00 531.90 L 129.00 531.27 L 136.00 530.48 L 143.00 529.50 L 150.00 528.31 L 157.00 526.85 L 164.00 525.09 L 171.00 522.98 L 178.00 520.46 L 185.00 517.49 L 192.00 514.00 L 199.00 509.93 L 206.00 505.23 L 213.00 499.84 L 220.00 493.70 L 227.00 486.77 L 234.00 479.00 L 241.00 470.36 L 248.00 460.84 L 255.00 450.41 L 262.00 439.11 L 269.00 426.94 L 276.00 413.96 L 283.00 400.22 L 290.00 385.82 L 297.00 370.85 L 304.00 355.43 L 311.00 339.69 L 318.00 323.78 L 325.00 307.85 L 332.00 292.05 L 339.00 276.56 L 346.00 261.52 L 353.00 247.10 L 360.00 233.42 L 367.00 220.61 L 374.00 208.79 L 381.00 198.04 L 388.00 188.44 L 395.00 180.01 L 402.00 172.80 L 409.00 166.81 L 416.00 162.01 L 423.00 158.38 L 430.00 155.88 L 437.00 154.44 L 444.00 154.00 L 451.00 154.50 L 458.00 155.86 L 465.00 158.03 L 472.00 160.93 L 479.00 164.51 L 486.00 168.72 L 493.00 173.51 L 500.00 178.86 L 507.00 184.74 L 514.00 191.12 L 521.00 197.98 L 528.00 205.31 L 535.00 213.10 L 542.00 221.33 L 549.00 229.99 L 556.00 239.03 L 563.00 248.45 L 570.00 258.19 L 577.00 268.21 L 584.00 278.45 L 591.00 288.84 L 598.00 299.31 L 605.00 309.78 L 612.00 320.15 L 619.00 330.32 L 626.00 340.20 L 633.00 349.70 L 640.00 358.72 L 647.00 367.19 L 654.00 375.03 L 661.00 382.20 L 668.00 388.67 L 675.00 394.42 L 682.00 399.48 L 689.00 403.89 L 696.00 407.73 L 703.00 411.07 L 710.00 414.04 L 717.00 416.75 L 724.00 419.34 L 731.00 421.95 L 738.00 424.69 L 745.00 427.68 L 752.00 431.01 L 759.00 434.75 L 766.00 438.94 L 773.00 443.58 L 780.00 448.66 L 787.00 454.12 L 794.00 459.90 L 801.00 465.91 L 808.00 472.04 L 815.00 478.19 L 822.00 484.25 L 829.00 490.12 L 836.00 495.73 L 843.00 500.98 L 850.00 505.83 L 857.00 510.25 L 864.00 514.20 L 871.00 517.68 L 878.00 520.71 L 885.00 523.30 L 892.00 525.50 L 899.00 527.32 L 906.00 528.82 L 913.00 530.04 L 920.00 531.02 L 927.00 531.79 L 934.00 532.39 L 941.00 532.85 L 948.00 533.20 L 955.00 533.47 L 962.00 533.67 L 969.00 533.81 L 976.00 533.92 L 983.00 533.99 L 990.00 534.05 L 990.00 550.00 L 80.00 550.00 Z" fill="#F8FAFC" stroke="#1D4ED8" stroke-width="2.5" fill-opacity="0.6"/>
+  <line x1="290.00" y1="110" x2="290.00" y2="550" stroke="#DC2626" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <line x1="325.00" y1="110" x2="325.00" y2="550" stroke="#D97706" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <line x1="465.00" y1="110" x2="465.00" y2="550" stroke="#1E293B" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <line x1="507.00" y1="110" x2="507.00" y2="550" stroke="#7C3AED" stroke-width="1.8" stroke-dasharray="5 3"/>
+  <rect x="750.00" y="107.00" width="13" height="13" rx="2" fill="#DC2626"/>
+  <text x="769.00" y="117.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">5th percentile</text>
+  <rect x="750.00" y="129.00" width="13" height="13" rx="2" fill="#D97706"/>
+  <text x="769.00" y="139.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Starting capital / breakeven</text>
+  <rect x="750.00" y="151.00" width="13" height="13" rx="2" fill="#1E293B"/>
+  <text x="769.00" y="161.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Median terminal value</text>
+  <rect x="750.00" y="173.00" width="13" height="13" rx="2" fill="#7C3AED"/>
+  <text x="769.00" y="183.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Mean terminal value</text>
+  <line x1="185.00" y1="550" x2="185.00" y2="556" stroke="#475569" stroke-width="1"/>
+  <text x="185.00" y="570.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">$80k</text>
+  <line x1="325.00" y1="550" x2="325.00" y2="556" stroke="#475569" stroke-width="1"/>
+  <text x="325.00" y="570.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">$100k</text>
+  <line x1="465.00" y1="550" x2="465.00" y2="556" stroke="#475569" stroke-width="1"/>
+  <text x="465.00" y="570.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">$120k</text>
+  <line x1="605.00" y1="550" x2="605.00" y2="556" stroke="#475569" stroke-width="1"/>
+  <text x="605.00" y="570.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">$140k</text>
+  <line x1="745.00" y1="550" x2="745.00" y2="556" stroke="#475569" stroke-width="1"/>
+  <text x="745.00" y="570.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">$160k</text>
+  <line x1="885.00" y1="550" x2="885.00" y2="556" stroke="#475569" stroke-width="1"/>
+  <text x="885.00" y="570.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">$180k</text>
+  <text x="535.00" y="604.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="600">Terminal portfolio value after one year</text>
+  <text x="20.00" y="325.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="600" transform="rotate(-90 20.00 325.00)">Relative probability density</text>
+</svg>

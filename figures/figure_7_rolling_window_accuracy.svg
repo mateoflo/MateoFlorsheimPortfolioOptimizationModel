@@ -1,0 +1,40 @@
+<svg width="1100" height="700" viewBox="0 0 1100 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="700" fill="#FFFFFF"/>
+  <text x="100.00" y="46.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="700">Rolling Window OOS Accuracy — 3-Year Training, 1-Year Evaluation</text>
+  <text x="100.00" y="70.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">3-year in-sample window  |  1-year out-of-sample evaluation  |  1,000 unique 10-ticker portfolios per year  |  691-ticker universe</text>
+  <rect x="100.00" y="120.00" width="860.00" height="440.00" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <line x1="100.00" y1="560.00" x2="960.00" y2="560.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="92.00" y="565.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">0%</text>
+  <line x1="100.00" y1="472.00" x2="960.00" y2="472.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="92.00" y="477.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">20%</text>
+  <line x1="100.00" y1="384.00" x2="960.00" y2="384.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="92.00" y="389.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">40%</text>
+  <line x1="100.00" y1="296.00" x2="960.00" y2="296.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="92.00" y="301.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">60%</text>
+  <line x1="100.00" y1="208.00" x2="960.00" y2="208.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="92.00" y="213.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">80%</text>
+  <line x1="100.00" y1="120.00" x2="960.00" y2="120.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="92.00" y="125.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13">100%</text>
+  <line x1="100.00" y1="560.00" x2="960.00" y2="560.00" stroke="#475569" stroke-width="1.5"/>
+  <rect x="151.60" y="389.63" width="111.80" height="170.37" fill="#2563EB" rx="3"/>
+  <text x="207.50" y="381.63" text-anchor="middle" fill="#2563EB" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">38.7%</text>
+  <text x="207.50" y="580.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">2021</text>
+  <text x="207.50" y="598.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">n = 953</text>
+  <rect x="366.60" y="540.17" width="111.80" height="19.83" fill="#DC2626" rx="3"/>
+  <text x="422.50" y="532.17" text-anchor="middle" fill="#DC2626" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">4.5%</text>
+  <text x="422.50" y="580.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">2022</text>
+  <text x="422.50" y="598.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">n = 932</text>
+  <rect x="581.60" y="163.03" width="111.80" height="396.97" fill="#059669" rx="3"/>
+  <text x="637.50" y="155.03" text-anchor="middle" fill="#059669" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">90.2%</text>
+  <text x="637.50" y="580.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">2023</text>
+  <text x="637.50" y="598.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">n = 951</text>
+  <rect x="796.60" y="281.21" width="111.80" height="278.79" fill="#7C3AED" rx="3"/>
+  <text x="852.50" y="273.21" text-anchor="middle" fill="#7C3AED" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">63.4%</text>
+  <text x="852.50" y="580.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">2024</text>
+  <text x="852.50" y="598.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">n = 988</text>
+  <text x="35.00" y="340.00" transform="rotate(-90 35.00 340.00)" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="600">OOS Accuracy Rate</text>
+  <text x="530.00" y="678.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">OOS Evaluation Year  (the unseen year the model never trained on)</text>
+  <text x="100.00" y="692.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="normal">OOS accuracy = % of portfolios where realized return ≥ model forecast. Accuracy is always measured on the out-of-sample year — never on training data. Universe screened as of 2024-01-01; earlier years carry modest survivorship bias.</text>
+  <text x="422.50" y="618.00" text-anchor="middle" fill="#DC2626" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="normal">Bear market: model trained on bull-run data,</text>
+  <text x="422.50" y="633.00" text-anchor="middle" fill="#DC2626" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="normal">underestimated 2022 drawdown risk.</text>
+</svg>

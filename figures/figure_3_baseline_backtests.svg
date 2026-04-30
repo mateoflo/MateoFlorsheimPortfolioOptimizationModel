@@ -1,0 +1,40 @@
+<svg width="960" height="640" viewBox="0 0 960 640" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="640" fill="#FFFFFF"/>
+  <text x="80.00" y="36.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="700">Baseline Backtest Results</text>
+  <text x="80.00" y="58.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Prediction accuracy vs. profitability rate across the first three out-of-sample experiments</text>
+  <text x="80.00" y="76.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Accuracy = realized ≥ expected return. Profitability = portfolio finished positive.</text>
+  <rect x="80.00" y="110.00" width="820.00" height="450.00" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <line x1="80.00" y1="560.00" x2="900.00" y2="560.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="564.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">0%</text>
+  <line x1="80.00" y1="452.86" x2="900.00" y2="452.86" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="456.86" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">25%</text>
+  <line x1="80.00" y1="345.71" x2="900.00" y2="345.71" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="349.71" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">50%</text>
+  <line x1="80.00" y1="238.57" x2="900.00" y2="238.57" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="242.57" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">75%</text>
+  <line x1="80.00" y1="131.43" x2="900.00" y2="131.43" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="135.43" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">100%</text>
+  <text x="216.67" y="582.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Run 1</text>
+  <text x="216.67" y="600.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">100 portfolios / 20 tickers</text>
+  <rect x="141.60" y="294.50" width="71.07" height="265.50" fill="#1D4ED8" rx="3"/>
+  <text x="177.13" y="286.50" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">59.0%</text>
+  <rect x="220.67" y="168.50" width="71.07" height="391.50" fill="#16A34A" rx="3"/>
+  <text x="256.20" y="160.50" text-anchor="middle" fill="#16A34A" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">87.0%</text>
+  <text x="490.00" y="582.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Run 2</text>
+  <text x="490.00" y="600.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">9,997 portfolios / 20 tickers</text>
+  <rect x="414.93" y="518.78" width="71.07" height="41.22" fill="#1D4ED8" rx="3"/>
+  <text x="450.47" y="510.78" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">9.2%</text>
+  <rect x="494.00" y="153.97" width="71.07" height="406.03" fill="#16A34A" rx="3"/>
+  <text x="529.53" y="145.97" text-anchor="middle" fill="#16A34A" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">90.2%</text>
+  <text x="763.33" y="582.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Run 3</text>
+  <text x="763.33" y="600.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">994 portfolios / 10 tickers</text>
+  <rect x="688.27" y="454.52" width="71.07" height="105.48" fill="#1D4ED8" rx="3"/>
+  <text x="723.80" y="446.52" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">23.4%</text>
+  <rect x="767.33" y="200.54" width="71.07" height="359.46" fill="#16A34A" rx="3"/>
+  <text x="802.87" y="192.54" text-anchor="middle" fill="#16A34A" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">79.9%</text>
+  <rect x="560.00" y="115.00" width="13" height="13" rx="2" fill="#1D4ED8"/>
+  <text x="579.00" y="125.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Prediction accuracy (realized ≥ expected)</text>
+  <rect x="560.00" y="137.00" width="13" height="13" rx="2" fill="#16A34A"/>
+  <text x="579.00" y="147.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Profitable (positive realized return)</text>
+  <text x="490.00" y="628.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Profitability was consistently higher than formal accuracy, driven by overly optimistic return forecasts.</text>
+</svg>

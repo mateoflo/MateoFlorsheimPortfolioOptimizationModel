@@ -1,0 +1,27 @@
+<svg width="780" height="580" viewBox="0 0 780 580" xmlns="http://www.w3.org/2000/svg">
+  <rect width="780" height="580" fill="#FFFFFF"/>
+  <text x="80.00" y="36.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="700">Optimized vs. Equal-Weight vs. SPY</text>
+  <text x="80.00" y="58.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Mean realized annual return across the 10-ticker point-in-time backtests, plus benchmarks</text>
+  <text x="80.00" y="76.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" font-weight="normal">Example portfolio: APP AUPH BRZE BTAI GLPG IMAX IRWD MAXN MLKN SE</text>
+  <rect x="80.00" y="110.00" width="640.00" height="390.00" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <line x1="80.00" y1="500.00" x2="720.00" y2="500.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="504.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">0%</text>
+  <line x1="80.00" y1="370.00" x2="720.00" y2="370.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="374.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">5%</text>
+  <line x1="80.00" y1="240.00" x2="720.00" y2="240.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="244.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">10%</text>
+  <line x1="80.00" y1="110.00" x2="720.00" y2="110.00" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="72.00" y="114.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">15%</text>
+  <rect x="141.87" y="245.20" width="89.60" height="254.80" fill="#1D4ED8" rx="3"/>
+  <text x="186.67" y="237.20" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">9.8%</text>
+  <text x="186.67" y="522.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Optimized</text>
+  <rect x="355.20" y="315.40" width="89.60" height="184.60" fill="#0F766E" rx="3"/>
+  <text x="400.00" y="307.40" text-anchor="middle" fill="#0F766E" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">7.1%</text>
+  <text x="400.00" y="522.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">1/N Equal</text>
+  <text x="400.00" y="538.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Weight</text>
+  <rect x="568.53" y="260.80" width="89.60" height="239.20" fill="#D97706" rx="3"/>
+  <text x="613.33" y="252.80" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">9.2%</text>
+  <text x="613.33" y="522.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">SPY</text>
+  <text x="613.33" y="538.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">(2024)</text>
+  <text x="400.00" y="564.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Source: backtest results (10-ticker, 1-year forecast). Optimized portfolio realized ~9.8%, 1/N ~7.1%, SPY ~9.2%.</text>
+</svg>

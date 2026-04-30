@@ -1,0 +1,36 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#FFFFFF"/>
+  <text x="60.00" y="44.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="700">HMM Regime-Switching Model</text>
+  <text x="60.00" y="66.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">Methodological diagram: the model treats market returns as switching between latent regimes rather than a single stationary process.</text>
+  <rect x="70.00" y="140.00" width="280.00" height="240.00" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.5" rx="6"/>
+  <text x="210.00" y="178.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">State A</text>
+  <text x="210.00" y="200.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Low Vol / Stable</text>
+  <text x="90.00" y="228.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• Lower variance</text>
+  <text x="90.00" y="250.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• Higher persistence</text>
+  <text x="90.00" y="272.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• Moderate tail risk</text>
+  <rect x="420.00" y="140.00" width="280.00" height="240.00" fill="#FFF7ED" stroke="#D97706" stroke-width="1.5" rx="6"/>
+  <text x="560.00" y="178.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">State B</text>
+  <text x="560.00" y="200.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">High Vol / Stress</text>
+  <text x="440.00" y="228.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• Higher variance</text>
+  <text x="440.00" y="250.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• Wider outcome range</text>
+  <text x="440.00" y="272.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• Correlation spikes</text>
+  <rect x="770.00" y="140.00" width="280.00" height="240.00" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.5" rx="6"/>
+  <text x="910.00" y="178.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="15" font-weight="700">Simulation Layer</text>
+  <text x="910.00" y="200.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Monte Carlo Engine</text>
+  <text x="790.00" y="228.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• Markov transitions</text>
+  <text x="790.00" y="250.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• State-specific returns</text>
+  <text x="790.00" y="272.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">• Daily path generation</text>
+  <line x1="350.00" y1="220.00" x2="420.00" y2="200.00" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="420.00" y1="200.00" x2="408.09" y2="198.54" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="420.00" y1="200.00" x2="410.66" y2="207.53" stroke="#1E293B" stroke-width="2.5"/>
+  <text x="385.00" y="196.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="600">p(A→B)</text>
+  <line x1="420.00" y1="260.00" x2="350.00" y2="280.00" stroke="#1E293B" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="350.00" y1="280.00" x2="361.91" y2="281.46" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="350.00" y1="280.00" x2="359.34" y2="272.47" stroke="#1E293B" stroke-width="2.5"/>
+  <text x="385.00" y="256.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="600">p(B→A)</text>
+  <line x1="700.00" y1="240.00" x2="770.00" y2="240.00" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="770.00" y1="240.00" x2="758.95" y2="235.33" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="770.00" y1="240.00" x2="758.95" y2="244.67" stroke="#1E293B" stroke-width="2.5"/>
+  <text x="735.00" y="226.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="600">state draws</text>
+  <text x="600.00" y="540.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">This is a methodological diagram. It explains why the Monte Carlo engine is regime-aware rather than assuming constant volatility.</text>
+</svg>
