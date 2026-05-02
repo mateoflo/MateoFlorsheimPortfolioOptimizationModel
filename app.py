@@ -1,3 +1,5 @@
+"""Desktop GUI for the portfolio optimizer built with tkinter."""
+
 from __future__ import annotations
 
 import tkinter as tk
@@ -6,6 +8,7 @@ from tkinter import messagebox, ttk
 from optimizer import AssetInput, PortfolioConfig, optimize_portfolio_from_tickers
 
 
+# Default example portfolio shown when the app first loads
 DEFAULT_ROWS = [
     {"ticker": "SPY", "max_weight": "45"},
     {"ticker": "QQQ", "max_weight": "35"},
@@ -15,8 +18,10 @@ DEFAULT_ROWS = [
 
 
 class PortfolioOptimizerApp:
-    # This sets up the whole window and variables so the GUI can run.
+    """Main application window that owns all widgets and handles user interactions."""
+
     def __init__(self, root: tk.Tk) -> None:
+        """Initialize the window, build all widgets, load example data, and bind Enter to optimize."""
         self.root = root
         self.root.title("Portfolio Optimizer")
         self.root.geometry("1400x900")
@@ -27,27 +32,32 @@ class PortfolioOptimizerApp:
         self.setting_entries: dict[str, ttk.Entry] = {}
         self.selector_vars: dict[str, tk.StringVar] = {}
         self.summary_vars: dict[str, tk.StringVar] = {}
+
         self.status_var = tk.StringVar(
             value="Enter stock tickers and portfolio settings. The optimizer will estimate stock statistics from market history and decide the split across stocks, cash, and Treasury bills."
         )
 
         self.build_layout()
         self.load_example()
+
+        # Pressing Enter anywhere triggers optimization.
         self.root.bind("<Return>", lambda _: self.run_optimization())
 
-    # This lays out all the widgets so the window looks organized for the user.
     def build_layout(self) -> None:
+        """Construct and arrange all widgets inside the root window."""
         outer = ttk.Frame(self.root, padding=12)
         outer.pack(fill="both", expand=True)
         outer.columnconfigure(0, weight=1)
         outer.rowconfigure(1, weight=1)
         outer.rowconfigure(2, weight=1)
 
+        # --- Section 1: Portfolio Inputs ---
         settings = ttk.LabelFrame(outer, text="Portfolio Inputs", padding=10)
         settings.grid(row=0, column=0, sticky="ew", pady=(0, 8))
         for idx in range(4):
             settings.columnconfigure(idx, weight=1)
 
+        # Each tuple: (internal key, display label, default value)
         fields = [
             ("capital", "Capital ($)", "100000"),
             ("lookback_years", "Lookback years", "3"),
@@ -63,6 +73,7 @@ class PortfolioOptimizerApp:
             ("simulation_horizon_years", "MC horizon years", "1"),
         ]
         for idx, (key, label, value) in enumerate(fields):
+            # Place four fields per row, cycling through four columns.
             field_frame = ttk.Frame(settings)
             field_frame.grid(row=idx // 4, column=idx % 4, sticky="ew", padx=6, pady=4)
             field_frame.columnconfigure(1, weight=1)
@@ -73,6 +84,7 @@ class PortfolioOptimizerApp:
             entry.grid(row=0, column=1, sticky="ew")
             self.setting_entries[key] = entry
 
+        # Controls row: T-bill checkbox and allocation-mode selector
         controls_row = ttk.Frame(settings)
         controls_row.grid(row=4, column=0, columnspan=4, sticky="ew", padx=6, pady=(4, 0))
         controls_row.columnconfigure(0, weight=1)
@@ -87,6 +99,7 @@ class PortfolioOptimizerApp:
         )
         auto_tbill.grid(row=0, column=0, sticky="w")
 
+        # "Manual" lets users type per-ticker caps; "Auto" lets the optimizer set them.
         self.selector_vars["max_allocation_mode"] = tk.StringVar(value="Manual")
         max_alloc_frame = ttk.Frame(controls_row)
         max_alloc_frame.grid(row=0, column=1, sticky="e")
@@ -95,7 +108,7 @@ class PortfolioOptimizerApp:
             max_alloc_frame,
             textvariable=self.selector_vars["max_allocation_mode"],
             values=["Manual", "Auto"],
-            state="readonly",
+            state="readonly",  # Prevents typing values not in the list.
             width=12,
         )
         selector.grid(row=0, column=1, sticky="w")
@@ -104,6 +117,7 @@ class PortfolioOptimizerApp:
         self.toggle_tbill_fallback_state()
         self.toggle_max_weight_mode()
 
+        # --- Section 2: Assets (scrollable ticker list) ---
         asset_frame = ttk.LabelFrame(outer, text="Assets", padding=10)
         asset_frame.grid(row=1, column=0, sticky="nsew", pady=(0, 8))
         asset_frame.columnconfigure(0, weight=1)
@@ -122,6 +136,7 @@ class PortfolioOptimizerApp:
         for col, (label, width) in enumerate(zip(labels, widths)):
             ttk.Label(header, text=label, width=width).grid(row=0, column=col, sticky="w", padx=3)
 
+        # Canvas + inner Frame enable vertical scrolling for many tickers.
         asset_canvas = tk.Canvas(asset_frame, highlightthickness=0, height=180, bg=self.root.cget("bg"))
         asset_canvas.grid(row=2, column=0, sticky="nsew")
         asset_scroll = ttk.Scrollbar(asset_frame, orient="vertical", command=asset_canvas.yview)
@@ -129,8 +144,10 @@ class PortfolioOptimizerApp:
         asset_canvas.configure(yscrollcommand=asset_scroll.set)
         self.asset_rows_frame = ttk.Frame(asset_canvas)
         asset_canvas.create_window((0, 0), window=self.asset_rows_frame, anchor="nw")
+        # Update scroll region whenever rows are added or removed.
         self.asset_rows_frame.bind("<Configure>", lambda _: asset_canvas.configure(scrollregion=asset_canvas.bbox("all")))
 
+        # --- Section 3: Optimizer Output ---
         output = ttk.LabelFrame(outer, text="Optimizer Output", padding=10)
         output.grid(row=2, column=0, sticky="nsew")
         output.rowconfigure(1, weight=1)
@@ -140,6 +157,8 @@ class PortfolioOptimizerApp:
         summary.grid(row=0, column=0, sticky="ew", pady=(0, 10))
         for idx in range(4):
             summary.columnconfigure(idx, weight=1)
+
+        # Each tuple: (internal key, display label)
         summary_fields = [
             ("expected_return", "Expected Return"),
             ("expected_volatility", "Expected Volatility"),
@@ -160,7 +179,7 @@ class PortfolioOptimizerApp:
             card = ttk.Frame(summary, padding=(8, 4))
             card.grid(row=idx // 4, column=idx % 4, sticky="ew")
             ttk.Label(card, text=label).pack(anchor="w")
-            var = tk.StringVar(value="--")
+            var = tk.StringVar(value="--")  # Placeholder until optimization runs.
             self.summary_vars[key] = var
             ttk.Label(card, textvariable=var, font=("TkDefaultFont", 12, "bold")).pack(anchor="w")
 
@@ -171,6 +190,7 @@ class PortfolioOptimizerApp:
 
         columns = ("ticker", "price", "exp_return", "vol", "target_weight", "shares", "dollars", "realized_weight")
         self.output_table = ttk.Treeview(table_frame, columns=columns, show="headings", height=12)
+
         headings = {
             "ticker": "Ticker",
             "price": "Price",
@@ -195,16 +215,19 @@ class PortfolioOptimizerApp:
             self.output_table.heading(key, text=headings[key])
             self.output_table.column(key, width=widths[key], anchor="center")
         self.output_table.grid(row=0, column=0, sticky="nsew")
+
         output_scroll = ttk.Scrollbar(table_frame, orient="vertical", command=self.output_table.yview)
         output_scroll.grid(row=0, column=1, sticky="ns")
         self.output_table.configure(yscrollcommand=output_scroll.set)
 
+        # Status bar at the bottom shows progress and completion messages.
         status = ttk.Label(output, textvariable=self.status_var, anchor="w")
         status.grid(row=2, column=0, sticky="ew", pady=(10, 0))
 
-    # This adds a new row where the user can type another ticker and allocation.
     def add_asset_row(self, values: dict | None = None) -> None:
+        """Add a new ticker row (ticker entry, max-weight entry, remove button) to the asset list."""
         values = values or {"ticker": "", "max_weight": "25"}
+
         row_frame = ttk.Frame(self.asset_rows_frame)
         row_frame.grid(row=len(self.asset_rows), column=0, sticky="ew", pady=2)
 
@@ -214,6 +237,8 @@ class PortfolioOptimizerApp:
         ttk.Entry(row_frame, textvariable=ticker, width=18).grid(row=0, column=0, padx=3)
         max_weight_entry = ttk.Entry(row_frame, textvariable=max_weight, width=14)
         max_weight_entry.grid(row=0, column=1, padx=3)
+
+        # Lambda captures row_frame so the correct row is removed even if the list changes.
         ttk.Button(row_frame, text="X", width=4, command=lambda rf=row_frame: self.remove_asset_row(rf)).grid(row=0, column=2, padx=3)
 
         self.asset_rows.append(
@@ -227,33 +252,33 @@ class PortfolioOptimizerApp:
         self.refresh_asset_rows()
         self.toggle_max_weight_mode()
 
-    # This removes a row when the user no longer wants that ticker in play.
     def remove_asset_row(self, row_frame: ttk.Frame) -> None:
+        """Remove the asset row associated with the given frame and destroy its widgets."""
         self.asset_rows = [row for row in self.asset_rows if row["frame"] is not row_frame]
         row_frame.destroy()
         self.refresh_asset_rows()
 
-    # This redraws the table whenever rows change so the scrollbar stays in sync.
     def refresh_asset_rows(self) -> None:
+        """Re-assign sequential grid positions to all asset rows after an add or remove."""
         for idx, row in enumerate(self.asset_rows):
             row["frame"].grid_configure(row=idx)
 
-    # This fills in sample data so the user can see how the optimizer works.
     def load_example(self) -> None:
+        """Clear the asset list and populate it with the default example portfolio."""
         for row in list(self.asset_rows):
             row["frame"].destroy()
         self.asset_rows.clear()
         for values in DEFAULT_ROWS:
             self.add_asset_row(values)
 
-    # This reads the asset rows and turns them into AssetInput objects for optimization.
     def parse_assets(self) -> list[AssetInput]:
+        """Read each ticker row and return a list of AssetInput objects for the optimizer."""
         assets: list[AssetInput] = []
         for row in self.asset_rows:
             assets.append(
                 AssetInput(
                     ticker=row["ticker"].get().strip().upper(),
-                    price=0.0,
+                    price=0.0,       # Fetched internally by the optimizer.
                     expected_return=0.0,
                     volatility=0.0,
                     max_weight=self.parse_ratio(row["max_weight"].get()),
@@ -261,16 +286,19 @@ class PortfolioOptimizerApp:
             )
         return assets
 
-    # This gathers the config fields so the optimizer knows the lookback, cash, etc.
     def parse_config(self) -> PortfolioConfig:
+        """Read the settings panel and return a populated PortfolioConfig for the optimizer."""
+        # Optional fields pass None when left blank.
         target_raw = self.setting_vars["target_volatility"].get().strip()
         target_volatility = self.parse_ratio(target_raw) if target_raw else None
+
         target_return_raw = self.setting_vars["target_expected_return"].get().strip()
         target_expected_return = self.parse_ratio(target_return_raw) if target_return_raw else None
+
         return PortfolioConfig(
             capital=float(self.setting_vars["capital"].get()),
-            risk_aversion=4.0,
-            shrinkage=0.20,
+            risk_aversion=4.0,        # Fixed internal tuning constant.
+            shrinkage=0.20,           # Fixed internal tuning constant.
             concentration_penalty=0.05,
             min_cash_weight=self.parse_ratio(self.setting_vars["min_cash_weight"].get()),
             max_cash_weight=self.parse_optional_ratio(self.setting_vars["max_cash_weight"].get()),
@@ -287,25 +315,27 @@ class PortfolioOptimizerApp:
         )
 
     @staticmethod
-    # This turns a text percent into a decimal ratio the optimizer understands.
     def parse_ratio(raw: str) -> float:
+        """Convert a percentage string (e.g. '12') to a decimal fraction (0.12)."""
         value = float(raw)
-        if abs(value) >= 1:
+        if abs(value) >= 1:  # Values >= 1 are treated as whole-number percentages.
             return value / 100.0
         return value
 
     @classmethod
-    # This handles optional percent fields by allowing empty inputs.
     def parse_optional_ratio(cls, raw: str) -> float | None:
+        """Convert a percentage string to a decimal fraction, or return None if blank."""
         cleaned = raw.strip()
         if not cleaned:
             return None
         return cls.parse_ratio(cleaned)
 
-    # This triggers the entire optimization run and then updates the UI with results.
     def run_optimization(self) -> None:
+        """Collect all GUI inputs, run the optimizer, and populate the summary and results table."""
         self.status_var.set("Estimating market statistics and resolving Treasury bill yield...")
+        # Force the status bar to update before the optimizer blocks the thread.
         self.root.update_idletasks()
+
         try:
             assets = self.parse_assets()
             config = self.parse_config()
@@ -316,6 +346,7 @@ class PortfolioOptimizerApp:
             messagebox.showerror("Optimization Error", str(exc))
             return
 
+        # Populate summary cards with formatted results.
         self.summary_vars["expected_return"].set(f"{result['expected_return']:.2%}")
         self.summary_vars["expected_volatility"].set(f"{result['expected_volatility']:.2%}")
         self.summary_vars["risk_level"].set(f"{result['risk_label']} ({result['risk_score']}/100)")
@@ -329,6 +360,8 @@ class PortfolioOptimizerApp:
         self.summary_vars["tbill_yield"].set(f"{result['treasury_bill_yield']:.2%}")
         self.summary_vars["tbill_source"].set(result["treasury_bill_source"])
         self.summary_vars["sample_window"].set(result["sample_window"])
+
+        # Populate Monte Carlo summary cards.
         monte_carlo = result["monte_carlo"]
         self.summary_vars["mc_expected_value"].set(f"${monte_carlo['expected_terminal_value']:,.0f}")
         self.summary_vars["mc_median_value"].set(f"${monte_carlo['median_terminal_value']:,.0f}")
@@ -336,8 +369,10 @@ class PortfolioOptimizerApp:
         self.summary_vars["mc_loss_prob"].set(f"{monte_carlo['probability_of_loss']:.2%}")
         self.summary_vars["mc_paths"].set(f"{monte_carlo['paths']:,} @ {monte_carlo['horizon_years']:.1f}y")
 
+        # Clear previous results before inserting new rows.
         for item in self.output_table.get_children():
             self.output_table.delete(item)
+
         for row in result["asset_rows"]:
             self.output_table.insert(
                 "",
@@ -353,22 +388,23 @@ class PortfolioOptimizerApp:
                     f"{row['realized_weight']:.2%}",
                 ),
             )
+
         self.status_var.set(
             "Optimization complete. Stock returns and risk were estimated from adjusted close history, and the model allocated across stocks, cash, and Treasury bills before running Monte Carlo."
         )
 
-    # This enables or disables the fallback fetching of T-bill yields when toggled.
     def toggle_tbill_fallback_state(self) -> None:
+        """Enable or disable the fallback T-bill yield entry based on the auto-fetch checkbox."""
         entry = self.setting_entries.get("treasury_bill_yield")
         if entry is None:
-            return
+            return  # Widget not yet created.
         if self.boolean_vars["auto_treasury_bill_yield"].get():
             entry.configure(state="normal")
         else:
             entry.configure(state="normal")
 
-    # This shows or hides manual max-weight fields depending on the selected mode.
     def toggle_max_weight_mode(self) -> None:
+        """Enable per-ticker max-weight entries in Manual mode and disable them in Auto mode."""
         manual_mode = self.selector_vars["max_allocation_mode"].get() == "Manual"
         for row in self.asset_rows:
             entry = row.get("max_weight_entry")
@@ -376,11 +412,11 @@ class PortfolioOptimizerApp:
                 entry.configure(state="normal" if manual_mode else "disabled")
 
 
-# This starts the Tkinter GUI when you run app.py from the command line.
 def main() -> None:
+    """Create the tkinter root window, apply the clam theme, and start the app event loop."""
     root = tk.Tk()
     style = ttk.Style(root)
-    if "clam" in style.theme_names():
+    if "clam" in style.theme_names():  # "clam" looks more modern than the default theme.
         style.theme_use("clam")
     PortfolioOptimizerApp(root)
     root.mainloop()

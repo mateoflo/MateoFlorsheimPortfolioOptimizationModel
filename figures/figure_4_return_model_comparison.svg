@@ -1,7 +1,7 @@
 <svg width="1050" height="680" viewBox="0 0 1050 680" xmlns="http://www.w3.org/2000/svg">
   <rect width="1050" height="680" fill="#FFFFFF"/>
   <text x="80.00" y="36.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="700">Expected-Return Model Comparison</text>
-  <text x="80.00" y="58.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">994 completed 10-ticker backtests, formation date 2024-01-01  |  Three metrics per estimator</text>
+  <text x="80.00" y="58.00" text-anchor="start" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="13" font-weight="normal">994 completed 10-ticker backtests, formation date 2024-01-01  |  Expected and realized return shown as median values</text>
   <rect x="80.00" y="110.00" width="910.00" height="480.00" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
   <line x1="80.00" y1="590.00" x2="990.00" y2="590.00" stroke="#E2E8F0" stroke-width="1"/>
   <text x="72.00" y="594.00" text-anchor="end" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">0%</text>
@@ -19,37 +19,37 @@
   <text x="148.25" y="449.63" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">23%</text>
   <rect x="175.00" y="480.79" width="45.50" height="109.21" fill="#0F766E" rx="3"/>
   <text x="197.75" y="472.79" text-anchor="middle" fill="#0F766E" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">19%</text>
-  <rect x="224.50" y="534.77" width="45.50" height="55.23" fill="#D97706" rx="3"/>
-  <text x="247.25" y="526.77" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">10%</text>
+  <rect x="224.50" y="540.08" width="45.50" height="49.92" fill="#D97706" rx="3"/>
+  <text x="247.25" y="532.08" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">9%</text>
   <text x="421.25" y="612.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Bayes-</text>
   <text x="421.25" y="628.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Stein</text>
   <rect x="353.00" y="458.76" width="45.50" height="131.24" fill="#1D4ED8" rx="3"/>
   <text x="375.75" y="450.76" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">23%</text>
   <rect x="402.50" y="481.01" width="45.50" height="108.99" fill="#0F766E" rx="3"/>
   <text x="425.25" y="473.01" text-anchor="middle" fill="#0F766E" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">19%</text>
-  <rect x="452.00" y="534.72" width="45.50" height="55.28" fill="#D97706" rx="3"/>
-  <text x="474.75" y="526.72" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">10%</text>
+  <rect x="452.00" y="540.08" width="45.50" height="49.92" fill="#D97706" rx="3"/>
+  <text x="474.75" y="532.08" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">9%</text>
   <text x="648.75" y="612.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Market</text>
   <text x="648.75" y="628.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Factor</text>
   <rect x="580.50" y="156.53" width="45.50" height="433.47" fill="#1D4ED8" rx="3"/>
   <text x="603.25" y="148.53" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">77%</text>
   <rect x="630.00" y="584.13" width="45.50" height="5.87" fill="#0F766E" rx="3"/>
   <text x="652.75" y="576.13" text-anchor="middle" fill="#0F766E" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">1%</text>
-  <rect x="679.50" y="538.50" width="45.50" height="51.50" fill="#D97706" rx="3"/>
-  <text x="702.25" y="530.50" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">9%</text>
+  <rect x="679.50" y="542.06" width="45.50" height="47.94" fill="#D97706" rx="3"/>
+  <text x="702.25" y="534.06" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">8%</text>
   <text x="876.25" y="612.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Black-</text>
   <text x="876.25" y="628.00" text-anchor="middle" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">Litterman</text>
   <rect x="808.00" y="327.52" width="45.50" height="262.48" fill="#1D4ED8" rx="3"/>
   <text x="830.75" y="319.52" text-anchor="middle" fill="#1D4ED8" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">46%</text>
   <rect x="857.50" y="532.74" width="45.50" height="57.26" fill="#0F766E" rx="3"/>
   <text x="880.25" y="524.74" text-anchor="middle" fill="#0F766E" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">10%</text>
-  <rect x="907.00" y="534.83" width="45.50" height="55.17" fill="#D97706" rx="3"/>
-  <text x="929.75" y="526.83" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">10%</text>
+  <rect x="907.00" y="540.13" width="45.50" height="49.87" fill="#D97706" rx="3"/>
+  <text x="929.75" y="532.13" text-anchor="middle" fill="#D97706" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" font-weight="700">9%</text>
   <rect x="710.00" y="115.00" width="13" height="13" rx="2" fill="#1D4ED8"/>
   <text x="729.00" y="125.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Accuracy rate</text>
   <rect x="710.00" y="137.00" width="13" height="13" rx="2" fill="#0F766E"/>
-  <text x="729.00" y="147.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Mean expected return</text>
+  <text x="729.00" y="147.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Median expected return</text>
   <rect x="710.00" y="159.00" width="13" height="13" rx="2" fill="#D97706"/>
-  <text x="729.00" y="169.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Mean realized return</text>
+  <text x="729.00" y="169.00" text-anchor="start" fill="#1E293B" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Median realized return</text>
   <text x="535.00" y="664.00" text-anchor="middle" fill="#475569" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" font-weight="normal">Market Factor achieves highest accuracy by lowering the hurdle; Black-Litterman best balances calibration and realized return.</text>
 </svg>

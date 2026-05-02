@@ -1,3 +1,5 @@
+"""Lightweight HTTP web server exposing the portfolio optimizer through a browser UI."""
+
 from __future__ import annotations
 
 import json
@@ -13,6 +15,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from optimizer import AssetInput, PortfolioConfig, optimize_portfolio_from_tickers
 
 
+# Absolute paths to the templates and static-file directories.
 BASE_DIR = Path(__file__).resolve().parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 STATIC_DIR = BASE_DIR / "static"
@@ -20,6 +23,8 @@ STATIC_DIR = BASE_DIR / "static"
 
 @dataclass
 class OptimizerPageDefaults:
+    """Default values pre-filled in the web form on first load."""
+
     capital: str = "100000"
     lookback_years: str = "3"
     auto_max_floor: str = "2"
@@ -38,6 +43,7 @@ class OptimizerPageDefaults:
     auto_treasury_bill_yield: bool = True
 
 
+# Example ETFs pre-loaded so users can run the optimizer without typing anything.
 DEFAULT_ASSETS = [
     {"ticker": "SPY", "max_weight": "45"},
     {"ticker": "QQQ", "max_weight": "35"},
@@ -45,54 +51,57 @@ DEFAULT_ASSETS = [
     {"ticker": "XLV", "max_weight": "20"},
 ]
 
-
+# Jinja2 environment with auto-escaping enabled for HTML/XML to prevent XSS.
 env = Environment(
     loader=FileSystemLoader(str(TEMPLATES_DIR)),
     autoescape=select_autoescape(["html", "xml"]),
 )
 
 
-# This turns the percent string into a small decimal ratio for the optimizer.
 def parse_ratio(raw: str) -> float:
+    """Convert a percentage string (e.g. '12') to a decimal fraction (0.12)."""
     value = float(raw)
-    if abs(value) >= 1:
+    if abs(value) >= 1:  # Values >= 1 are treated as whole-number percentages.
         return value / 100.0
     return value
 
 
-# This lets optional percent strings stay empty or convert to decimals.
 def parse_optional_ratio(raw: str | None) -> float | None:
+    """Convert a percentage string to a decimal fraction, or return None if blank."""
     cleaned = (raw or "").strip()
     if not cleaned:
         return None
     return parse_ratio(cleaned)
 
 
-# This reads the JSON body and makes the asset list and config objects.
 def parse_request_payload(payload: dict) -> tuple[list[AssetInput], PortfolioConfig, float]:
+    """Unpack the POST /api/optimize JSON body into typed optimizer input objects."""
     assets_payload = payload.get("assets", [])
     assets: list[AssetInput] = []
+
     for row in assets_payload:
         ticker = str(row.get("ticker", "")).strip().upper()
-        if not ticker:
+        if not ticker:  # Skip rows with no ticker.
             continue
         assets.append(
             AssetInput(
                 ticker=ticker,
-                price=0.0,
+                price=0.0,           # Fetched internally by the optimizer.
                 expected_return=0.0,
                 volatility=0.0,
                 max_weight=parse_ratio(str(row.get("max_weight", "0"))),
             )
         )
+
     if not assets:
         raise ValueError("At least one stock ticker is required.")
 
     settings = payload.get("settings", {})
+
     config = PortfolioConfig(
         capital=float(settings.get("capital", "100000")),
-        risk_aversion=4.0,
-        shrinkage=0.20,
+        risk_aversion=4.0,           # Fixed internal tuning constant.
+        shrinkage=0.20,              # Fixed internal tuning constant.
         concentration_penalty=0.05,
         min_cash_weight=parse_ratio(str(settings.get("min_cash_weight", "5"))),
         max_cash_weight=parse_optional_ratio(settings.get("max_cash_weight")),
@@ -106,16 +115,17 @@ def parse_request_payload(payload: dict) -> tuple[list[AssetInput], PortfolioCon
         target_volatility=parse_optional_ratio(settings.get("target_volatility")),
         expected_return_method=str(settings.get("expected_return_method", "historical_mean")),
         expected_return_shrinkage=parse_ratio(str(settings.get("expected_return_shrinkage", "50"))),
-        hmm_states=2,
+        hmm_states=2,  # Fixed: bull and bear hidden states for regime detection.
         simulation_paths=int(float(settings.get("simulation_paths", "10000"))),
         simulation_horizon_years=float(settings.get("simulation_horizon_years", "1")),
     )
+
     lookback_years = float(settings.get("lookback_years", "3"))
     return assets, config, lookback_years
 
 
-# This makes the optimizer output ready to send back in JSON form.
 def serialize_result(result: dict) -> dict:
+    """Format the raw optimizer result into JSON-safe strings ready for the browser."""
     monte_carlo = result["monte_carlo"]
     return {
         "summary": {
@@ -153,15 +163,18 @@ def serialize_result(result: dict) -> dict:
 
 
 class PortfolioWebHandler(BaseHTTPRequestHandler):
+    """Handle all HTTP GET and POST requests for the portfolio optimizer web app."""
+
     server_version = "PortfolioOptimizerWeb/1.0"
 
-    # This suppresses the default HTTP logging so we keep the console clean.
     def log_message(self, format: str, *args) -> None:
+        """Suppress default per-request console logging."""
         return
 
-    # This serves GET requests for the homepage and health endpoints.
     def do_GET(self) -> None:
+        """Route GET requests to the index page, static files, or health check."""
         parsed = urlparse(self.path)
+
         if parsed.path == "/":
             self.render_index()
             return
@@ -171,18 +184,21 @@ class PortfolioWebHandler(BaseHTTPRequestHandler):
         if parsed.path == "/health":
             self.send_json({"status": "ok"})
             return
+
         self.send_error(HTTPStatus.NOT_FOUND, "Not found")
 
-    # This handles POST requests for optimization requests from the frontend.
     def do_POST(self) -> None:
+        """Route POST requests to the optimizer API endpoint."""
         parsed = urlparse(self.path)
+
         if parsed.path == "/api/optimize":
             self.handle_optimize()
             return
+
         self.send_error(HTTPStatus.NOT_FOUND, "Not found")
 
-    # This writes the HTML file back to the browser for the main page.
     def render_index(self) -> None:
+        """Render index.html with default form values and send it to the browser."""
         template = env.get_template("index.html")
         html = template.render(
             defaults=asdict(OptimizerPageDefaults()),
@@ -201,13 +217,17 @@ class PortfolioWebHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-    # This returns static files like CSS/JS for the frontend.
     def serve_static(self, path: str) -> None:
+        """Serve a static file (CSS, JS, images) from the static directory."""
         relative = path.removeprefix("/static/")
         file_path = (STATIC_DIR / relative).resolve()
+
+        # Reject paths that escape the static directory to prevent directory traversal.
         if not str(file_path).startswith(str(STATIC_DIR.resolve())) or not file_path.exists():
             self.send_error(HTTPStatus.NOT_FOUND, "Static file not found")
             return
+
+        # Set Content-Type based on file extension.
         content_type = "text/plain; charset=utf-8"
         if file_path.suffix == ".css":
             content_type = "text/css; charset=utf-8"
@@ -215,6 +235,7 @@ class PortfolioWebHandler(BaseHTTPRequestHandler):
             content_type = "application/javascript; charset=utf-8"
         elif file_path.suffix == ".svg":
             content_type = "image/svg+xml"
+
         data = file_path.read_bytes()
         self.send_response(HTTPStatus.OK)
         self.send_header("Content-Type", content_type)
@@ -222,8 +243,8 @@ class PortfolioWebHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(data)
 
-    # This runs the optimizer and sends the JSON response for the web UI.
     def handle_optimize(self) -> None:
+        """Parse the POST /api/optimize request, run the optimizer, and return JSON results."""
         try:
             content_length = int(self.headers.get("Content-Length", "0"))
             raw = self.rfile.read(content_length)
@@ -232,6 +253,7 @@ class PortfolioWebHandler(BaseHTTPRequestHandler):
             result = optimize_portfolio_from_tickers(assets, config, lookback_years=lookback_years)
             self.send_json({"ok": True, "result": serialize_result(result)})
         except Exception as exc:
+            # Return a descriptive error so the browser can display a helpful message.
             self.send_json(
                 {
                     "ok": False,
@@ -241,8 +263,8 @@ class PortfolioWebHandler(BaseHTTPRequestHandler):
                 status=HTTPStatus.BAD_REQUEST,
             )
 
-    # This writes a JSON response back to the browser with the given status.
     def send_json(self, payload: dict, status: HTTPStatus = HTTPStatus.OK) -> None:
+        """Serialize a dictionary to JSON and write it as the HTTP response."""
         body = json.dumps(payload).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
@@ -251,8 +273,8 @@ class PortfolioWebHandler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
 
-# This starts the HTTP server when the web frontend is launched.
 def main() -> None:
+    """Start the threaded HTTP server on localhost:8080 and serve until interrupted."""
     host = "127.0.0.1"
     port = 8080
     server = ThreadingHTTPServer((host, port), PortfolioWebHandler)
